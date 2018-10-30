@@ -73,10 +73,10 @@
 </layers>
 <board>
 <plain>
-<wire x1="10.16" y1="82.55" x2="55.86" y2="82.55" width="0" layer="20"/>
-<wire x1="55.86" y1="82.55" x2="55.86" y2="97.46" width="0" layer="20"/>
-<wire x1="55.86" y1="97.46" x2="10.16" y2="97.46" width="0" layer="20"/>
-<wire x1="10.16" y1="97.46" x2="10.16" y2="82.55" width="0" layer="20"/>
+<wire x1="0" y1="0" x2="160" y2="0" width="0" layer="20"/>
+<wire x1="160" y1="0" x2="160" y2="100" width="0" layer="20"/>
+<wire x1="160" y1="100" x2="0" y2="100" width="0" layer="20"/>
+<wire x1="0" y1="100" x2="0" y2="0" width="0" layer="20"/>
 </plain>
 <libraries>
 <library name="2.2ufCap">
@@ -442,78 +442,68 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="C2" library="2.2ufCap" package="U1-E" value="UPS1H2R2MDD1TD" x="45.72" y="90.17" smashed="yes">
-<attribute name="MANUFACTURER_PART_NUMBER" value="UPS1H2R2MDD1TD" x="60.96" y="78.74" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="41.4528" y="89.535" size="1.27" layer="25" ratio="6" rot="SR0"/>
-<attribute name="VENDOR" value="Nichicon" x="60.96" y="78.74" size="1.778" layer="27" display="off"/>
+<element name="C1" library="2.2ufCap" package="U1-E" value="UPS1H2R2MDD1TD" x="35.56" y="15.24" smashed="yes">
+<attribute name="MANUFACTURER_PART_NUMBER" value="UPS1H2R2MDD1TD" x="60.96" y="11.43" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="31.2928" y="14.605" size="1.27" layer="25" ratio="6" rot="SR0"/>
+<attribute name="VENDOR" value="Nichicon" x="60.96" y="11.43" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C3" library="22ufcap" package="CAP_C410" value="C410C224M5U5TA7200" x="50.8" y="85.09" smashed="yes" rot="R270">
-<attribute name="MANUFACTURER_PART_NUMBER" value="C410C224M5U5TA7200" x="30.48" y="71.12" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="48.895" y="94.7166" size="1.27" layer="25" ratio="6" rot="SR270"/>
-<attribute name="VENDOR" value="KEMET" x="30.48" y="71.12" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="C2" library="2.2ufCap" package="U1-E" value="UPS1H2R2MDD1TD" x="41.91" y="19.05" smashed="yes">
+<attribute name="MANUFACTURER_PART_NUMBER" value="UPS1H2R2MDD1TD" x="57.15" y="7.62" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="37.6428" y="18.415" size="1.27" layer="25" ratio="6" rot="SR0"/>
+<attribute name="VENDOR" value="Nichicon" x="57.15" y="7.62" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R1" library="10k Resistor" package="STA_CF14" value="CF14JT10K0" x="24.13" y="85.09" smashed="yes" rot="R180">
-<attribute name="MANUFACTURER_PART_NUMBER" value="CF14JT10K0" x="10.16" y="101.6" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="33.1216" y="85.725" size="1.27" layer="25" ratio="6" rot="SR180"/>
-<attribute name="VENDOR" value="Stackpole International" x="10.16" y="101.6" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="C3" library="22ufcap" package="CAP_C410" value="C410C224M5U5TA7200" x="44.45" y="39.37" smashed="yes">
+<attribute name="MANUFACTURER_PART_NUMBER" value="C410C224M5U5TA7200" x="58.42" y="19.05" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="36.0934" y="38.735" size="1.27" layer="25" ratio="6" rot="SR0"/>
+<attribute name="VENDOR" value="KEMET" x="58.42" y="19.05" size="1.778" layer="27" display="off"/>
 </element>
-<element name="U1" library="voltage_reg" package="DBV6" value="REG710NA-3.3/3K" x="33.02" y="90.17" smashed="yes">
-<attribute name="MANUFACTURER_PART_NUMBER" value="REG710NA3.33K" x="55.88" y="80.01" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="29.7434" y="89.535" size="1.27" layer="25" ratio="6" rot="SR0"/>
-<attribute name="VENDOR" value="Texas Instruments" x="55.88" y="80.01" size="1.778" layer="27" display="off"/>
+<element name="R1" library="10k Resistor" package="STA_CF14" value="CF14JT10K0" x="44.45" y="35.56" smashed="yes">
+<attribute name="MANUFACTURER_PART_NUMBER" value="CF14JT10K0" x="58.42" y="19.05" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="35.4584" y="34.925" size="1.27" layer="25" ratio="6" rot="SR0"/>
+<attribute name="VENDOR" value="Stackpole International" x="58.42" y="19.05" size="1.778" layer="27" display="off"/>
 </element>
-<element name="U2" library="attiny85" package="8S2" value="ATTINY85V-10SU" x="15.24" y="88.9" smashed="yes" rot="R90">
-<attribute name="MANUFACTURER_PART_NUMBER" value="ATTINY85V10SU" x="19.05" y="106.68" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="14.605" y="79.2734" size="1.27" layer="25" ratio="6" rot="SR90"/>
-<attribute name="VENDOR" value="Atmel" x="19.05" y="106.68" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="U1" library="voltage_reg" package="DBV6" value="REG710NA-3.3/3K" x="35.56" y="22.86" smashed="yes">
+<attribute name="MANUFACTURER_PART_NUMBER" value="REG710NA3.33K" x="58.42" y="12.7" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="32.2834" y="22.225" size="1.27" layer="25" ratio="6" rot="SR0"/>
+<attribute name="VENDOR" value="Texas Instruments" x="58.42" y="12.7" size="1.778" layer="27" display="off"/>
+</element>
+<element name="U2" library="attiny85" package="8S2" value="ATTINY85V-10SU" x="52.07" y="17.78" smashed="yes">
+<attribute name="MANUFACTURER_PART_NUMBER" value="ATTINY85V10SU" x="69.85" y="13.97" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="48.7934" y="17.145" size="1.27" layer="25" ratio="6" rot="SR0"/>
+<attribute name="VENDOR" value="Atmel" x="69.85" y="13.97" size="1.778" layer="27" display="off"/>
 </element>
 </elements>
 <signals>
 <signal name="GND">
 <contactref element="U1" pad="2"/>
+<contactref element="C1" pad="2"/>
 <contactref element="U2" pad="4"/>
 <contactref element="R1" pad="1"/>
-<wire x1="17.145" y1="85.2043" x2="19.1643" y2="85.2043" width="0.1524" layer="1"/>
-<wire x1="19.1643" y1="85.2043" x2="24.13" y2="90.17" width="0.1524" layer="1"/>
-<wire x1="24.13" y1="90.17" x2="27.94" y2="90.17" width="0.1524" layer="1"/>
-<wire x1="27.94" y1="90.17" x2="31.9024" y2="90.17" width="0.1524" layer="1"/>
-<wire x1="35.56" y1="85.09" x2="33.02" y2="87.63" width="0.1524" layer="1"/>
-<wire x1="29.21" y1="87.63" x2="27.94" y2="88.9" width="0.1524" layer="1"/>
-<wire x1="27.94" y1="88.9" x2="27.94" y2="90.17" width="0.1524" layer="1"/>
-<wire x1="33.02" y1="87.63" x2="29.21" y2="87.63" width="0.1524" layer="1"/>
+<wire x1="48.3743" y1="15.875" x2="35.56" y2="15.24" width="0" layer="19" extent="1-1"/>
+<wire x1="34.4424" y1="22.86" x2="35.56" y2="15.24" width="0" layer="19" extent="1-1"/>
+<wire x1="33.02" y1="35.56" x2="34.4424" y2="22.86" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="U1" pad="1"/>
+<contactref element="C1" pad="1"/>
 <contactref element="U2" pad="8"/>
-<wire x1="20.64" y1="91.12" x2="31.9024" y2="91.12" width="0.1524" layer="1"/>
-<wire x1="13.335" y1="92.5957" x2="13.335" y2="94.615" width="0.1524" layer="1"/>
-<wire x1="13.335" y1="94.615" x2="13.97" y2="95.25" width="0.1524" layer="1"/>
-<wire x1="13.97" y1="95.25" x2="16.51" y2="95.25" width="0.1524" layer="1"/>
-<wire x1="16.51" y1="95.25" x2="20.64" y2="91.12" width="0.1524" layer="1"/>
+<wire x1="34.4424" y1="23.81" x2="33.5534" y2="15.24" width="0" layer="19" extent="1-1"/>
+<wire x1="55.7657" y1="19.685" x2="34.4424" y2="23.81" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="U1" pad="6"/>
 <contactref element="C3" pad="1"/>
-<wire x1="34.1376" y1="91.12" x2="40.32" y2="91.12" width="0.1524" layer="1"/>
-<wire x1="40.32" y1="91.12" x2="40.64" y2="91.44" width="0.1524" layer="1"/>
-<wire x1="40.64" y1="91.44" x2="40.64" y2="95.25" width="0.1524" layer="1"/>
-<wire x1="40.64" y1="95.25" x2="41.7578" y2="96.3678" width="0.1524" layer="1"/>
-<wire x1="49.6822" y1="96.3678" x2="50.8" y2="95.25" width="0.1524" layer="1"/>
-<wire x1="41.7578" y1="96.3678" x2="49.6822" y2="96.3678" width="0.1524" layer="1"/>
+<wire x1="34.29" y1="39.37" x2="36.6776" y2="23.81" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
 <contactref element="U1" pad="4"/>
 <contactref element="C3" pad="2"/>
-<wire x1="34.1376" y1="89.22" x2="39.05" y2="89.22" width="0.1524" layer="1"/>
-<wire x1="39.05" y1="89.22" x2="39.37" y2="88.9" width="0.1524" layer="1"/>
-<wire x1="39.37" y1="88.9" x2="39.37" y2="87.63" width="0.1524" layer="1"/>
-<wire x1="39.37" y1="87.63" x2="41.91" y2="85.09" width="0.1524" layer="1"/>
-<wire x1="41.91" y1="85.09" x2="50.8" y2="85.09" width="0.1524" layer="1"/>
+<wire x1="44.45" y1="39.37" x2="36.6776" y2="21.91" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
 <contactref element="U1" pad="5"/>
 <contactref element="C2" pad="1"/>
-<wire x1="34.1376" y1="90.17" x2="43.7134" y2="90.17" width="0.1524" layer="1"/>
+<wire x1="39.9034" y1="19.05" x2="36.6776" y2="22.86" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VCC">
 <contactref element="C2" pad="2"/>
@@ -521,10 +511,7 @@ design rules under a new name.</description>
 <signal name="N$5">
 <contactref element="U2" pad="5"/>
 <contactref element="R1" pad="2"/>
-<wire x1="19.05" y1="83.82" x2="11.2522" y2="83.82" width="0.1524" layer="1"/>
-<wire x1="11.2522" y1="90.5256" x2="11.2522" y2="83.82" width="0.1524" layer="1"/>
-<wire x1="11.2522" y1="90.5256" x2="17.145" y2="92.5957" width="0" layer="19" extent="1-1"/>
-<wire x1="24.13" y1="85.09" x2="19.05" y2="83.82" width="0" layer="19" extent="1-1"/>
+<wire x1="44.45" y1="35.56" x2="55.7657" y2="15.875" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

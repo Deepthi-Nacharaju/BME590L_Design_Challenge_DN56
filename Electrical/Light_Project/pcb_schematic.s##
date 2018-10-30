@@ -1217,10 +1217,9 @@ Source: &lt;a href="http://www.farnell.com/datasheets/1505860.pdf"&gt; Data shee
 <segment>
 <pinref part="LED1" gate="G$1" pin="A"/>
 <wire x1="213.36" y1="-45.72" x2="223.52" y2="-45.72" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="-45.72" x2="223.52" y2="-10.16" width="0.1524" layer="91"/>
-<pinref part="U2" gate="A" pin="PB1_(MISO/DO/AIN1/OC0B/OC1A!/PCINT1)"/>
-<wire x1="223.52" y1="-10.16" x2="218.44" y2="-10.16" width="0.1524" layer="91"/>
-<junction x="218.44" y="-10.16"/>
+<wire x1="223.52" y1="-45.72" x2="223.52" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="U2" gate="A" pin="PB2_(SCK/USCK/SCL/ADC1/T0/INT0/PCINT2)"/>
+<wire x1="218.44" y1="-7.62" x2="223.52" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
