@@ -713,6 +713,60 @@
 </deviceset>
 </devicesets>
 </library>
+<library name="22ufcap">
+<packages>
+<package name="CAP_C410">
+<pad name="1" x="-10.16" y="0" drill="0.762" diameter="1.27" shape="square"/>
+<pad name="2" x="0" y="0" drill="0.762" diameter="1.27" rot="R180"/>
+<wire x1="-7.366" y1="-1.397" x2="-2.794" y2="-1.397" width="0.1524" layer="21"/>
+<wire x1="-2.794" y1="-1.397" x2="-2.794" y2="1.397" width="0.1524" layer="21"/>
+<wire x1="-2.794" y1="1.397" x2="-7.366" y2="1.397" width="0.1524" layer="21"/>
+<wire x1="-7.366" y1="1.397" x2="-7.366" y2="-1.397" width="0.1524" layer="21"/>
+<wire x1="-10.16" y1="0" x2="-7.239" y2="0" width="0.1524" layer="51"/>
+<wire x1="0" y1="0" x2="-2.921" y2="0" width="0.1524" layer="51"/>
+<wire x1="-7.239" y1="-1.27" x2="-2.921" y2="-1.27" width="0.1524" layer="51"/>
+<wire x1="-2.921" y1="-1.27" x2="-2.921" y2="1.27" width="0.1524" layer="51"/>
+<wire x1="-2.921" y1="1.27" x2="-7.239" y2="1.27" width="0.1524" layer="51"/>
+<wire x1="-7.239" y1="1.27" x2="-7.239" y2="-1.27" width="0.1524" layer="51"/>
+<text x="-8.3566" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+</package>
+</packages>
+<symbols>
+<symbol name="CAPH">
+<pin name="22" x="7.62" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="11" x="0" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<wire x1="3.4798" y1="-1.905" x2="3.4798" y2="0" width="0.2032" layer="94"/>
+<wire x1="3.4798" y1="0" x2="3.4798" y2="1.905" width="0.2032" layer="94"/>
+<wire x1="4.1148" y1="-1.905" x2="4.1148" y2="0" width="0.2032" layer="94"/>
+<wire x1="4.1148" y1="0" x2="4.1148" y2="1.905" width="0.2032" layer="94"/>
+<wire x1="4.1148" y1="0" x2="5.08" y2="0" width="0.2032" layer="94"/>
+<wire x1="2.54" y1="0" x2="3.4798" y2="0" width="0.2032" layer="94"/>
+<text x="-5.1562" y="-5.5372" size="3.4798" layer="96" ratio="10" rot="SR0">&gt;Value</text>
+<text x="-4.0894" y="2.0828" size="3.4798" layer="95" ratio="10" rot="SR0">&gt;Name</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="C410C224M5U5TA7200" prefix="C">
+<gates>
+<gate name="A" symbol="CAPH" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="CAP_C410">
+<connects>
+<connect gate="A" pin="11" pad="1"/>
+<connect gate="A" pin="22" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MANUFACTURER_PART_NUMBER" value="C410C224M5U5TA7200" constant="no"/>
+<attribute name="VENDOR" value="KEMET" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -732,6 +786,7 @@
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R1" library="10k Resistor" deviceset="CF14JT10K0" device=""/>
+<part name="C3" library="22ufcap" deviceset="C410C224M5U5TA7200" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -770,6 +825,10 @@
 <attribute name="VALUE" x="234.1372" y="-28.0162" size="3.4798" layer="96" ratio="10" rot="SR90"/>
 <attribute name="NAME" x="226.5172" y="-27.5844" size="3.4798" layer="95" ratio="10" rot="SR90"/>
 </instance>
+<instance part="C3" gate="A" x="106.68" y="86.36" smashed="yes">
+<attribute name="VALUE" x="101.5238" y="80.8228" size="3.4798" layer="96" ratio="10" rot="SR0"/>
+<attribute name="NAME" x="102.5906" y="88.4428" size="3.4798" layer="95" ratio="10" rot="SR0"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -789,26 +848,44 @@
 <wire x1="10.16" y1="-12.7" x2="2.54" y2="-12.7" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 <wire x1="2.54" y1="-12.7" x2="2.54" y2="-17.78" width="0.1524" layer="91"/>
+<junction x="10.16" y="-12.7"/>
+<junction x="2.54" y="-17.78"/>
 </segment>
 <segment>
 <pinref part="GND3" gate="1" pin="GND"/>
 <pinref part="R1" gate="A" pin="11"/>
+<junction x="228.6" y="-25.4"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="VOUT"/>
 <wire x1="12.7" y1="86.36" x2="12.7" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="91.44" x2="-2.54" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="91.44" x2="7.62" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="C1" gate="A" pin="11"/>
 <wire x1="-2.54" y1="91.44" x2="-5.08" y2="91.44" width="0.1524" layer="91"/>
 <junction x="-2.54" y="91.44"/>
+<wire x1="-2.54" y1="91.44" x2="7.62" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="91.44" x2="7.62" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="U2" gate="A" pin="VCC"/>
+<wire x1="7.62" y1="27.94" x2="218.44" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="27.94" x2="218.44" y2="10.16" width="0.1524" layer="91"/>
+<junction x="7.62" y="91.44"/>
+<junction x="218.44" y="-5.08"/>
+<junction x="218.44" y="10.16"/>
+<wire x1="218.44" y1="10.16" x2="218.44" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="10.16" x2="228.6" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="10.16" x2="228.6" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="228.6" y="-2.54"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="CPUMP+"/>
 <wire x1="78.74" y1="86.36" x2="106.68" y2="86.36" width="0.1524" layer="91"/>
+<junction x="78.74" y="86.36"/>
+<pinref part="C3" gate="A" pin="11"/>
+<junction x="106.68" y="86.36"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -817,6 +894,9 @@
 <wire x1="78.74" y1="81.28" x2="119.38" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="81.28" x2="119.38" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="86.36" x2="114.3" y2="86.36" width="0.1524" layer="91"/>
+<junction x="78.74" y="81.28"/>
+<pinref part="C3" gate="A" pin="22"/>
+<junction x="114.3" y="86.36"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -825,6 +905,8 @@
 <wire x1="78.74" y1="83.82" x2="86.36" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="C2" gate="A" pin="11"/>
 <wire x1="86.36" y1="83.82" x2="86.36" y2="96.52" width="0.1524" layer="91"/>
+<junction x="78.74" y="83.82"/>
+<junction x="86.36" y="96.52"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -832,6 +914,8 @@
 <pinref part="P+1" gate="VCC" pin="VCC"/>
 <pinref part="C2" gate="A" pin="22"/>
 <wire x1="86.36" y1="109.22" x2="86.36" y2="104.14" width="0.1524" layer="91"/>
+<junction x="86.36" y="104.14"/>
+<junction x="86.36" y="109.22"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -839,6 +923,8 @@
 <pinref part="U2" gate="A" pin="PB0_(MOSI/DI/SDA/AIN0/OC0A/OC1A/AREF/PCINT0)"/>
 <pinref part="R1" gate="A" pin="22"/>
 <wire x1="218.44" y1="-12.7" x2="228.6" y2="-12.7" width="0.1524" layer="91"/>
+<junction x="218.44" y="-12.7"/>
+<junction x="228.6" y="-12.7"/>
 </segment>
 </net>
 </nets>

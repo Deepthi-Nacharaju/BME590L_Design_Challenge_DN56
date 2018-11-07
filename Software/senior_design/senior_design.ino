@@ -16,7 +16,7 @@ void setup() {
   // put your setup code here, to run once:
   pinMode(LED, OUTPUT);
   pinMode(BUTTON, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(BUTTON), blink, RISING);
+  attachInterrupt(BUTTON, blink, RISING);
 }
 
 void loop() {
