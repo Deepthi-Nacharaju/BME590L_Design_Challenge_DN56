@@ -16,7 +16,10 @@ void setup() {
   // put your setup code here, to run once:
   pinMode(LED, OUTPUT);
   pinMode(BUTTON, INPUT_PULLUP);
-  attachInterrupt(BUTTON, blink, RISING);
+  //attachInterrupt(BUTTON, blink, RISING);
+  GIMSK = 0b00100000;
+  PCMSK = 0b0010011;
+  sei();
 }
 
 void loop() {
@@ -44,7 +47,7 @@ void loop() {
   }
 }
 
-void blink() {
+ISR(PCINT0_vect) {
   button_state += 1;
 }
 
