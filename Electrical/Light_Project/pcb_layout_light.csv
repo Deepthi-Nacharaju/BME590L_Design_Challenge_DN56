@@ -1,0 +1,10 @@
+"Part";"Value";"Device";"Package";"Description";"DESCRIPTION";"DIGI-KEY_PART_NUMBER";"DIGI-KEY_PURCHASE_URL";"MANUFACTURER_PART_NUMBER";"MF";"MP";"PACKAGE";"PROD_ID";"VALUE";"VENDOR";
+"C1";"GRJ155R60J106ME11D";"GRJ155R60J106ME11D";"CAPC1005X55N";"CAPACITOR CERAMIC MLCC 0402 10UF 6.3V SMD";" Capacitor Ceramic Mlcc 0402 10uf 6.3v Smd ";"490-13211-1-ND";"https://www.digikey.com/product-detail/en/murata-electronics-north-america/GRJ155R60J106ME11D/490-13211-1-ND/5877419?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol";"";"Murata";"GRJ155R60J106ME11D";"0402 Murata";"";"";"";
+"C2";"GRJ155R60J106ME11D";"GRJ155R60J106ME11D";"CAPC1005X55N";"CAPACITOR CERAMIC MLCC 0402 10UF 6.3V SMD";" Capacitor Ceramic Mlcc 0402 10uf 6.3v Smd ";"490-13211-1-ND";"https://www.digikey.com/product-detail/en/murata-electronics-north-america/GRJ155R60J106ME11D/490-13211-1-ND/5877419?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol";"";"Murata";"GRJ155R60J106ME11D";"0402 Murata";"";"";"";
+"C3";"GRJ155R60J106ME11D";"GRJ155R60J106ME11D";"CAPC1005X55N";"CAPACITOR CERAMIC MLCC 0402 10UF 6.3V SMD";" Capacitor Ceramic Mlcc 0402 10uf 6.3v Smd ";"490-13211-1-ND";"https://www.digikey.com/product-detail/en/murata-electronics-north-america/GRJ155R60J106ME11D/490-13211-1-ND/5877419?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol";"";"Murata";"GRJ155R60J106ME11D";"0402 Murata";"";"";"";
+"D1";"GREEN";"LED-GREEN0603";"LED-0603";"Green SMD LED";"";"";"";"";"";"";"";"DIO-00821";"GREEN";"";
+"R1";"RR0510P-103-D";"RR0510P-103-D";"RES_0510";"";"";"";"";"RR0510P103D";"";"";"";"";"";"Susumu";
+"R2";"RR0816P-112-D";"RR0816P-112-D";"RES_0816";"";"";"";"";"RR0816P112D";"";"";"";"";"";"Susumu";
+"U1";"REG710NA-3.3/3K";"REG710NA-3.3/3K";"DBV6";"";"";"";"";"REG710NA3.33K";"";"";"";"";"";"Texas Instruments";
+"U2";"ATTINY85V-10SU";"ATTINY85V-10SU";"8S2";"";"";"";"";"ATTINY85V10SU";"";"";"";"";"";"Atmel";
+"U3";"FSM8JRT";"FSM8JRT";"SWITCH_FSM4JRT";"";"";"";"";"FSM8JRT";"";"";"";"";"";"TE Connectivity";
