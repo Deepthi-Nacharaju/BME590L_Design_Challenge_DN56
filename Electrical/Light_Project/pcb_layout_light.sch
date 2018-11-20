@@ -651,31 +651,12 @@
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
-<symbol name="VCC" urn="urn:adsk.eagle:symbol:26928/1" library_version="1">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="VCC" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" urn="urn:adsk.eagle:component:26954/1" prefix="GND" library_version="1">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="GND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="VCC" urn="urn:adsk.eagle:component:26957/1" prefix="P+" library_version="1">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="VCC" symbol="VCC" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -1335,7 +1316,6 @@ LED</description>
 <part name="U1" library="voltage_reg" deviceset="REG710NA-3.3/3K" device=""/>
 <part name="U2" library="attiny85" deviceset="ATTINY85V-10SU" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U3" library="button" deviceset="FSM8JRT" device=""/>
@@ -1362,9 +1342,6 @@ LED</description>
 </instance>
 <instance part="GND1" gate="1" x="-15.24" y="83.82" smashed="yes" rot="R270">
 <attribute name="VALUE" x="-17.78" y="86.36" size="1.778" layer="96" rot="R270"/>
-</instance>
-<instance part="P+1" gate="VCC" x="86.36" y="111.76" smashed="yes">
-<attribute name="VALUE" x="83.82" y="109.22" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND2" gate="1" x="2.54" y="-20.32" smashed="yes">
 <attribute name="VALUE" x="0" y="-22.86" size="1.778" layer="96"/>
@@ -1502,13 +1479,6 @@ LED</description>
 <pinref part="C1" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="VCC" class="0">
-<segment>
-<pinref part="P+1" gate="VCC" pin="VCC"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="86.36" y1="109.22" x2="86.36" y2="106.68" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="D1" gate="G$1" pin="A"/>
@@ -1524,6 +1494,12 @@ LED</description>
 <wire x1="220.98" y1="-15.24" x2="220.98" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="U2" gate="A" pin="PB1_(MISO/DO/AIN1/OC0B/OC1A!/PCINT1)"/>
 <wire x1="220.98" y1="-10.16" x2="218.44" y2="-10.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="86.36" y1="109.22" x2="86.36" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
