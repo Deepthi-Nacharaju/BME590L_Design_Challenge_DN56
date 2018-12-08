@@ -767,6 +767,69 @@
 </deviceset>
 </devicesets>
 </library>
+<library name="button">
+<packages>
+<package name="SWITCH_FSM4JRT">
+<pad name="1" x="-5.0038" y="0" drill="1.0922" diameter="1.6002" shape="square"/>
+<pad name="2" x="0" y="0" drill="1.0922" diameter="1.6002"/>
+<wire x1="-5.7404" y1="-3.2258" x2="0.7112" y2="-3.2258" width="0.1524" layer="21"/>
+<wire x1="0.7112" y1="-3.2258" x2="0.7112" y2="-0.8636" width="0.1524" layer="21"/>
+<wire x1="0.7112" y1="3.2258" x2="-5.7404" y2="3.2258" width="0.1524" layer="21"/>
+<wire x1="-5.7404" y1="3.2258" x2="-5.7404" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="-5.7404" y1="-1.143" x2="-5.7404" y2="-3.2258" width="0.1524" layer="21"/>
+<wire x1="0.7112" y1="0.8636" x2="0.7112" y2="3.2258" width="0.1524" layer="21"/>
+<wire x1="-7.3152" y1="0" x2="-7.7216" y2="0" width="0.1524" layer="21" curve="-180"/>
+<wire x1="-7.7216" y1="0" x2="-7.3152" y2="0" width="0.1524" layer="21" curve="-180"/>
+<wire x1="-5.2578" y1="0" x2="-5.0292" y2="0" width="0.1524" layer="51"/>
+<wire x1="-5.0292" y1="0" x2="-4.7498" y2="0" width="0.1524" layer="51"/>
+<wire x1="-5.0038" y1="-0.254" x2="-5.0038" y2="0.254" width="0.1524" layer="51"/>
+<wire x1="-5.6134" y1="0.5588" x2="-5.588" y2="-0.5588" width="0.1524" layer="51"/>
+<wire x1="0.6096" y1="-0.5588" x2="0.5842" y2="0.5588" width="0.1524" layer="51"/>
+<wire x1="-5.588" y1="-3.0988" x2="0.6096" y2="-3.0988" width="0.1524" layer="51"/>
+<wire x1="0.6096" y1="-3.0988" x2="0.6096" y2="3.0988" width="0.1524" layer="51"/>
+<wire x1="0.6096" y1="3.0988" x2="-5.588" y2="3.0988" width="0.1524" layer="51"/>
+<wire x1="-5.588" y1="3.0988" x2="-5.588" y2="-3.0988" width="0.1524" layer="51"/>
+<wire x1="-5.0292" y1="0" x2="-5.4356" y2="0" width="0" layer="51" curve="-180"/>
+<wire x1="-5.4356" y1="0" x2="-5.0292" y2="0" width="0" layer="51" curve="-180"/>
+<wire x1="-0.762" y1="0" x2="-4.2672" y2="0" width="0" layer="51" curve="-180"/>
+<wire x1="-4.2672" y1="0" x2="-0.762" y2="0" width="0" layer="51" curve="-180"/>
+<text x="-5.7658" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+</package>
+</packages>
+<symbols>
+<symbol name="SWITCH_FSM4JRT">
+<pin name="1" x="2.54" y="0" length="middle" direction="pas"/>
+<pin name="2" x="43.18" y="0" length="middle" direction="pas" rot="R180"/>
+<wire x1="7.62" y1="5.08" x2="7.62" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="38.1" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="38.1" y1="-5.08" x2="38.1" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="38.1" y1="5.08" x2="7.62" y2="5.08" width="0.1524" layer="94"/>
+<text x="18.1356" y="9.1186" size="2.0828" layer="95" ratio="6" rot="SR0">&gt;Name</text>
+<text x="17.5006" y="6.5786" size="2.0828" layer="96" ratio="6" rot="SR0">&gt;Value</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FSM8JRT" prefix="U">
+<gates>
+<gate name="A" symbol="SWITCH_FSM4JRT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SWITCH_FSM4JRT">
+<connects>
+<connect gate="A" pin="1" pad="1"/>
+<connect gate="A" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MANUFACTURER_PART_NUMBER" value="FSM8JRT" constant="no"/>
+<attribute name="VENDOR" value="TE Connectivity" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -787,6 +850,7 @@
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R1" library="10k Resistor" deviceset="CF14JT10K0" device=""/>
 <part name="C3" library="22ufcap" deviceset="C410C224M5U5TA7200" device=""/>
+<part name="U3" library="button" deviceset="FSM8JRT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -829,6 +893,10 @@
 <attribute name="VALUE" x="101.5238" y="80.8228" size="3.4798" layer="96" ratio="10" rot="SR0"/>
 <attribute name="NAME" x="102.5906" y="88.4428" size="3.4798" layer="95" ratio="10" rot="SR0"/>
 </instance>
+<instance part="U3" gate="A" x="243.84" y="-2.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="234.7214" y="15.5956" size="2.0828" layer="95" ratio="6" rot="SR90"/>
+<attribute name="VALUE" x="237.2614" y="14.9606" size="2.0828" layer="96" ratio="6" rot="SR90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -869,14 +937,14 @@
 <wire x1="7.62" y1="91.44" x2="7.62" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="U2" gate="A" pin="VCC"/>
 <wire x1="7.62" y1="27.94" x2="218.44" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="27.94" x2="218.44" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="27.94" x2="218.44" y2="-5.08" width="0.1524" layer="91"/>
 <junction x="7.62" y="91.44"/>
 <junction x="218.44" y="-5.08"/>
-<junction x="218.44" y="10.16"/>
-<wire x1="218.44" y1="10.16" x2="218.44" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="10.16" x2="228.6" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="10.16" x2="228.6" y2="-2.54" width="0.1524" layer="91"/>
-<junction x="228.6" y="-2.54"/>
+<wire x1="218.44" y1="27.94" x2="218.44" y2="43.18" width="0.1524" layer="91"/>
+<junction x="218.44" y="27.94"/>
+<wire x1="218.44" y1="43.18" x2="243.84" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="U3" gate="A" pin="2"/>
+<wire x1="243.84" y1="43.18" x2="243.84" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -907,6 +975,11 @@
 <wire x1="86.36" y1="83.82" x2="86.36" y2="96.52" width="0.1524" layer="91"/>
 <junction x="78.74" y="83.82"/>
 <junction x="86.36" y="96.52"/>
+<pinref part="U1" gate="A" pin="ENABLE"/>
+<wire x1="12.7" y1="81.28" x2="12.7" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="71.12" x2="86.36" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="71.12" x2="86.36" y2="83.82" width="0.1524" layer="91"/>
+<junction x="86.36" y="83.82"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -925,6 +998,9 @@
 <wire x1="218.44" y1="-12.7" x2="228.6" y2="-12.7" width="0.1524" layer="91"/>
 <junction x="218.44" y="-12.7"/>
 <junction x="228.6" y="-12.7"/>
+<pinref part="U3" gate="A" pin="1"/>
+<wire x1="228.6" y1="-12.7" x2="243.84" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="-12.7" x2="243.84" y2="0" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
